@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Midhin for enquiries and messages.">
+
+    <meta
+        name="description"
+        content="Contact Midhin for enquiries, questions and professional messages."
+    >
+
     <title>Contact | Midhin</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,7 +22,7 @@
             <a class="site-title" href="index.html">Midhin</a>
         </h1>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="skills.html">Skills</a>
@@ -25,41 +32,54 @@
         </nav>
     </header>
 
+
     <main class="page-container">
 
         <section class="page-intro">
             <h2>Contact Me</h2>
+
             <p>
                 If you have an enquiry, question or message,
                 you can contact me using the form below.
             </p>
         </section>
 
+
         <section class="content-section">
 
             <h2>Send Me a Message</h2>
 
-            <form action="https://formspree.io/f/xdeayerb" method="POST">
+            <form
+                action="https://formspree.io/f/xdeayerb"
+                method="POST"
+            >
 
                 <label for="name">Name:</label>
+
                 <input
                     type="text"
                     id="name"
                     name="name"
                     placeholder="Enter your name"
+                    autocomplete="name"
                     required
                 >
 
+
                 <label for="email">Email:</label>
+
                 <input
                     type="email"
                     id="email"
                     name="email"
                     placeholder="Enter your email"
+                    autocomplete="email"
                     required
                 >
 
+
                 <label for="subject">Subject:</label>
+
                 <input
                     type="text"
                     id="subject"
@@ -68,7 +88,9 @@
                     required
                 >
 
+
                 <label for="message">Message:</label>
+
                 <textarea
                     id="message"
                     name="message"
@@ -77,17 +99,52 @@
                     required
                 ></textarea>
 
-                <button type="submit">Send Enquiry</button>
+
+                <button type="submit">
+                    Send Enquiry
+                </button>
 
             </form>
 
         </section>
 
+
+        <section class="content-section">
+
+            <h2>Other Ways to Connect</h2>
+
+            <p>
+                You can also find my professional and project information
+                through my online profiles.
+            </p>
+
+            <p>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+            </p>
+
+            <p>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+            </p>
+
+        </section>
+
     </main>
 
+
     <footer>
-        <p>&copy; 2026 Midhin. All rights reserved.</p>
-        <a href="#top">Back to Top</a>
+
+        <p>
+            &copy; 2026 Midhin. All rights reserved.
+        </p>
+
+        <a href="#top">
+            Back to Top
+        </a>
+
     </footer>
 
 </body>
