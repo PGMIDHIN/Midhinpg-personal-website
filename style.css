@@ -1,3 +1,10 @@
+/* =========================================
+   Midhin Personal Website
+   Responsive + Performance-Focused CSS
+   ========================================= */
+
+/* ---------- Base ---------- */
+
 * {
     box-sizing: border-box;
 }
@@ -8,42 +15,18 @@ html {
 
 body {
     margin: 0;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #222;
-    background: #f4f7fb;
+    background: #f5f7fa;
+    color: #1f2937;
 }
 
-a {
-    color: #1d4ed8;
-}
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-    outline: 3px solid orange;
-    outline-offset: 3px;
-}
+/* ---------- Header ---------- */
 
 header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #dbeafe;
-    border-radius: 10px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 28px;
+    background: #ffffff;
+    padding: 20px 5%;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .site-title {
@@ -51,207 +34,252 @@ header h1 {
     text-decoration: none;
 }
 
+header h1 {
+    margin: 0 0 15px;
+    font-size: 2rem;
+}
+
+/* ---------- Navigation ---------- */
+
 nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 18px;
 }
 
 nav a {
-    font-weight: bold;
+    color: #1d4ed8;
+    font-weight: 600;
     text-decoration: none;
 }
 
-nav a:hover {
-    color: #dc2626;
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
 }
 
-nav a[aria-current="page"] {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-}
+/* ---------- Main Container ---------- */
 
-main,
 .page-container {
-    max-width: 1050px;
+    width: min(1100px, 90%);
     margin: 0 auto;
 }
 
-section {
-    margin: 25px 0;
+/* ---------- Hero ---------- */
+
+.hero {
+    margin: 40px 0;
+    padding: 50px 40px;
+    background: #ffffff;
+    border-radius: 12px;
 }
 
-.content-section,
-.page-intro {
-    padding: 25px;
-    background: #fff;
-    border-radius: 10px;
+.hero h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
 }
 
-h2 {
+.hero p {
+    max-width: 700px;
+    font-size: 1.1rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #1d4ed8;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.button:hover,
+.button:focus {
+    background: #1e40af;
+}
+
+/* ---------- Content Sections ---------- */
+
+.content-section {
+    margin: 40px 0;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.content-section h2 {
     margin-top: 0;
     color: #1d4ed8;
 }
 
-h3 {
-    margin-top: 0;
-    color: #2563eb;
-}
-
-.hero {
-    margin: 25px auto;
-    padding: 30px;
-    background: #eff6ff;
-    border-radius: 10px;
-}
-
-.hero h2 {
-    font-size: 32px;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    color: #fff;
-    background: #2563eb;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background: #1e40af;
-}
+/* ---------- Cards ---------- */
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
 .card {
-    min-width: 0;
-    padding: 20px;
+    padding: 25px;
     background: #f8fafc;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-.card:hover {
-    border-color: #2563eb;
-}
-
-.card p {
-    margin-bottom: 0;
-}
-
-.content-section ul {
-    padding-left: 22px;
-}
-
-.content-section li {
-    margin-bottom: 8px;
-}
-
-form {
-    display: grid;
-    gap: 10px;
-    max-width: 600px;
-}
-
-form label {
-    margin-top: 5px;
-    font-weight: bold;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 12px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    border: 1px solid #999;
-    border-radius: 5px;
-}
-
-input:focus,
-textarea:focus {
-    border-color: #2563eb;
-}
-
-textarea {
-    resize: vertical;
-}
-
-button {
-    width: fit-content;
-    max-width: 100%;
-    margin-top: 10px;
-    padding: 12px 22px;
-    font-size: 16px;
-    color: #fff;
-    background: #2563eb;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #1e40af;
-}
-
-footer {
-    max-width: 1050px;
-    margin: 30px auto 0;
-    padding: 20px;
-    text-align: center;
-    background: #dbeafe;
+    border: 1px solid #e5e7eb;
     border-radius: 10px;
 }
 
-footer p {
+.card h3 {
     margin-top: 0;
-    margin-bottom: 8px;
+    color: #1d4ed8;
+}
+
+.card a {
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+/* ---------- Forms ---------- */
+
+form {
+    max-width: 700px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid rgba(29, 78, 216, 0.2);
+    border-color: #1d4ed8;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 6px;
+    background: #1d4ed8;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background: #1e40af;
+}
+
+/* ---------- Lists ---------- */
+
+ul,
+ol {
+    padding-left: 25px;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    margin-top: 50px;
+    padding: 30px 5%;
+    background: #111827;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0 0 10px;
 }
 
 footer a {
-    text-decoration: none;
+    color: #ffffff;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
+/* ---------- Responsive Design ---------- */
 
-@media (max-width: 650px) {
-    body {
-        padding: 10px;
-    }
+@media (max-width: 768px) {
 
     header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
+        padding: 18px 5%;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
     }
 
     nav {
-        gap: 10px 15px;
+        gap: 12px 16px;
     }
 
     .hero {
-        padding: 20px;
+        margin: 25px 0;
+        padding: 35px 25px;
+    }
+
+    .content-section {
+        margin: 25px 0;
+        padding: 25px;
     }
 
     .hero h2 {
-        font-size: 27px;
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 15px;
     }
 
-    .content-section,
-    .page-intro {
-        padding: 18px;
+    .page-container {
+        width: 92%;
+    }
+
+    .hero {
+        padding: 28px 20px;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 8px;
     }
 
     .card-container {
         grid-template-columns: 1fr;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
     }
 }
