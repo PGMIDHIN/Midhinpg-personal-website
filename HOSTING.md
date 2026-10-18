@@ -4,6 +4,8 @@
 
 Midhin Personal Website
 
+---
+
 ## Technologies Used
 
 - HTML
@@ -11,18 +13,41 @@ Midhin Personal Website
 - Git
 - GitHub
 - GitHub Pages
+- GitHub Actions
+- HTTPS
 
-## 1. GitHub Hosting
+---
+
+# 1. Project Overview
+
+The Midhin Personal Website is a static personal website developed using HTML and CSS.
+
+The website contains information about my background, cybersecurity skills, projects, learning journey, and contact details.
+
+The website consists of multiple pages and is designed to be responsive, simple, accessible, and easy to navigate.
+
+The main website pages are:
+
+- Home
+- About
+- Skills
+- Projects
+- Learning
+- Contact
+
+---
+
+# 2. GitHub Hosting
 
 The project source code is stored in a public GitHub repository.
 
-Repository:
+GitHub is a platform used to store, manage, and collaborate on source code using Git.
+
+The project repository is:
 
 https://github.com/PGMIDHIN/Midhinpg-personal-website
 
-The website contains multiple HTML pages and a CSS stylesheet.
-
-The main files include:
+The repository contains the following main website files:
 
 - index.html
 - about.html
@@ -31,53 +56,147 @@ The main files include:
 - learning.html
 - contact.html
 - style.css
+- favicon.png
 
-## 2. GitHub Pages Deployment
+The repository also contains the GitHub Actions workflow used for deployment.
+
+---
+
+# 3. GitHub Pages Deployment
 
 GitHub Pages is used to publish the static website.
 
-The deployment configuration uses the main branch and GitHub Actions.
+The project uses the `main` branch and GitHub Actions for deployment.
 
-The deployment workflow:
+The deployment process is:
 
-1. The website files are stored in the GitHub repository.
-2. Changes are committed and pushed to GitHub.
-3. GitHub Actions starts the deployment workflow.
-4. The website files are uploaded as a Pages artifact.
-5. GitHub Pages deploys the artifact.
-6. The website becomes available through the GitHub Pages URL.
+1. The website files are created using HTML and CSS.
+2. The files are stored in the GitHub repository.
+3. Changes are committed to the repository.
+4. Changes are pushed to the `main` branch.
+5. GitHub Actions starts the deployment workflow.
+6. The workflow checks out the repository files.
+7. GitHub Pages prepares the website files for deployment.
+8. The website files are uploaded as a Pages artifact.
+9. GitHub Pages deploys the artifact.
+10. The website becomes publicly accessible through the GitHub Pages URL.
 
-Live Website:
+The live website is:
 
 https://pgmidhin.github.io/Midhinpg-personal-website/
 
-## 3. HTTPS
+---
+
+# 4. Hosting Method Used for This Project
+
+The actual deployment of this project was completed using GitHub Pages.
+
+GitHub Pages is suitable for this project because the website is a static website consisting primarily of HTML, CSS, images, and other static files.
+
+No server-side application is required to generate the pages.
+
+The final hosting architecture is:
+
+Internet
+   |
+   v
+GitHub Pages
+   |
+   v
+Midhin Personal Website
+   |
+   +-- index.html
+   +-- about.html
+   +-- skills.html
+   +-- projects.html
+   +-- learning.html
+   +-- contact.html
+   +-- style.css
+   +-- favicon.png
+
+The website is publicly accessible through the GitHub Pages URL.
+
+---
+
+# 5. HTTPS
 
 The website is served using HTTPS.
 
-HTTPS helps protect communication between the visitor's browser and the website from being viewed or modified in transit.
+HTTPS stands for Hypertext Transfer Protocol Secure.
 
-GitHub Pages provides HTTPS for the default GitHub Pages domain.
+HTTPS helps protect communication between a visitor's browser and the website by encrypting the connection.
 
-## 4. Cloud Hosting Basics
+The GitHub Pages website is accessible through an HTTPS URL:
 
-Cloud hosting means using computing and storage resources provided by a cloud provider through the internet.
+https://pgmidhin.github.io/Midhinpg-personal-website/
 
-Examples of cloud providers include:
+Using HTTPS is important because it helps protect data while it is being transferred between the user's browser and the website.
+
+---
+
+# 6. GitHub Actions
+
+GitHub Actions is used to automate the deployment process.
+
+The project contains a workflow inside:
+
+`.github/workflows/`
+
+The workflow performs the following major operations:
+
+1. Checks out the repository.
+2. Configures GitHub Pages.
+3. Uploads the website files as a deployment artifact.
+4. Deploys the artifact to GitHub Pages.
+
+The workflow is triggered when changes are pushed to the `main` branch.
+
+A manual workflow dispatch option is also available.
+
+This provides an automated deployment process instead of manually uploading the website every time a change is made.
+
+---
+
+# 7. Cloud Hosting Basics
+
+Cloud hosting means using computing, storage, and networking resources provided by a cloud service provider through the internet.
+
+Cloud platforms can be used to host:
+
+- Websites
+- Web applications
+- Databases
+- Files
+- Virtual machines
+- APIs
+- Other online services
+
+Examples of major cloud service providers include:
 
 - Amazon Web Services (AWS)
 - Microsoft Azure
 - Google Cloud
 
-Cloud hosting can be used for websites, applications, databases, storage and other services.
+Cloud hosting allows applications and websites to use infrastructure provided by a cloud provider instead of relying only on a physical server owned by the developer.
 
-## 5. AWS S3
+---
 
-Amazon S3 (Simple Storage Service) is an object storage service.
+# 8. AWS S3
 
-For a static website, HTML, CSS, JavaScript and other website files can be stored in an S3 bucket.
+AWS S3 stands for Amazon Simple Storage Service.
 
-Basic architecture:
+S3 is an object storage service provided by Amazon Web Services.
+
+S3 can be used to store static website files such as:
+
+- HTML
+- CSS
+- JavaScript
+- Images
+- Documents
+- Other static files
+
+For a static website, the basic architecture can be represented as:
 
 Internet
    |
@@ -86,22 +205,34 @@ AWS S3
    |
    v
 Static Website Files
+   |
+   +-- HTML
+   +-- CSS
+   +-- JavaScript
+   +-- Images
 
-S3 is suitable for static websites because the website does not require a server-side application to generate pages.
+S3 is suitable for static websites because the website does not require a server-side application to generate the pages.
 
-## 6. AWS EC2
+---
 
-Amazon EC2 (Elastic Compute Cloud) provides virtual servers in the AWS cloud.
+# 9. AWS EC2
 
-An EC2 instance can run an operating system and software such as:
+AWS EC2 stands for Amazon Elastic Compute Cloud.
+
+EC2 provides virtual servers in the AWS cloud.
+
+An EC2 instance can run an operating system and different types of software.
+
+For example, an EC2 instance can run:
 
 - Nginx
 - Apache
 - Application servers
 - Databases
 - Security tools
+- Other server software
 
-Basic architecture:
+A basic EC2 website architecture can be represented as:
 
 Internet
    |
@@ -117,68 +248,70 @@ Web Server
    v
 Website
 
-## 7. Security Groups
+Unlike a simple static hosting service, EC2 provides a virtual server where the administrator can install and configure software.
+
+---
+
+# 10. Static Hosting vs Server Hosting
+
+A static website mainly consists of files that are delivered to the user's browser.
+
+Examples:
+
+- HTML
+- CSS
+- JavaScript
+- Images
+
+The Midhin Personal Website is a static website.
+
+A dynamic website can contain server-side processing.
+
+For example:
+
+- PHP
+- Node.js
+- Python
+- Databases
+- Server-side APIs
+
+A simple comparison is:
+
+| Static Hosting | Server/Dynamic Hosting |
+|---|---|
+| Mainly serves static files | Runs server-side software |
+| Simple to deploy | More configuration required |
+| Suitable for HTML/CSS websites | Suitable for dynamic applications |
+| Example: GitHub Pages | Example: EC2 |
+
+---
+
+# 11. Security Groups
 
 An AWS Security Group acts as a virtual firewall for an EC2 instance.
 
-For a basic web server, common rules are:
+It controls network traffic that is allowed to reach the instance.
+
+For a basic web server, common ports include:
 
 | Protocol | Port | Purpose |
-|----------|------|---------|
+|---|---:|---|
 | HTTP | 80 | Web traffic |
 | HTTPS | 443 | Secure web traffic |
 | SSH | 22 | Server administration |
 
-HTTP and HTTPS may need to be available to visitors.
+HTTP and HTTPS may need to be accessible to website visitors.
 
-SSH should normally be restricted to trusted IP addresses rather than being unnecessarily exposed to the entire internet.
+SSH is used for remote administration of an EC2 server.
 
-Example:
+SSH access should normally be restricted to trusted IP addresses instead of unnecessarily allowing access from the entire internet.
 
-SSH:
-Port 22
+Example security configuration:
+
+### SSH
+
+```text
+Protocol: TCP
+Port: 22
 Source: My trusted IP address
-
-HTTP:
-Port 80
-Source: Internet
-
-HTTPS:
-Port 443
-Source: Internet
-
-## 8. Access Control
-
-AWS IAM is used to manage identities and permissions.
-
-Access should follow the principle of least privilege.
-
-Users and services should receive only the permissions required to perform their tasks.
-
-Examples include:
-
-- User authentication
-- Permission policies
-- IAM roles
-- Resource access control
-
-## 9. Security Considerations
-
-Basic security measures for cloud hosting include:
-
-- Use HTTPS.
-- Restrict administrative access.
-- Avoid unnecessary open ports.
-- Use strong authentication.
-- Apply least-privilege permissions.
-- Keep server software updated.
-- Monitor access and activity.
-- Protect credentials and secret keys.
-
-## 10. Conclusion
-
-The Midhin Personal Website is hosted using GitHub Pages and is publicly accessible through HTTPS.
-
-GitHub Pages is suitable for this project because it is a static HTML and CSS website.
-
-AWS S3 can also be used for static website hosting, while AWS EC2 can be used when a virtual server and server-side software are required.
+Purpose: Server administration
