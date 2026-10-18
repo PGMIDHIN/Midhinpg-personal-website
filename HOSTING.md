@@ -308,7 +308,7 @@ SSH access should normally be restricted to trusted IP addresses instead of unne
 
 Example security configuration:
 
-### SSH
+## SSH
 
 ```text
 Protocol: TCP
