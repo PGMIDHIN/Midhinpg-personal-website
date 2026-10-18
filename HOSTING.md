@@ -309,12 +309,12 @@ SSH access should normally be restricted to trusted IP addresses instead of unne
 Example security configuration:
 
 ### SSH
-
 ```text
 Protocol: TCP
 Port: 22
 Source: My trusted IP address
 Purpose: Server administration
+```
 
 ### HTTP
 
@@ -323,8 +323,260 @@ Protocol: TCP
 Port: 80
 Source: Internet
 Purpose: Web traffic
+```
 
+### HTTPS
+
+```text
 Protocol: TCP
 Port: 443
 Source: Internet
 Purpose: Secure web traffic
+```
+
+## 12. Access Control
+
+Access control determines who can access a resource and what actions they are allowed to perform.
+
+For a website, access control can include:
+
+- User authentication
+- Authorization
+- File permissions
+- Repository permissions
+- Cloud access policies
+
+The principle of least privilege should be followed by giving users and services only the permissions they need.
+
+### Authentication
+
+Authentication verifies the identity of a user.
+
+For example, a website may ask for a username and password before allowing a user to access their account.
+
+### Authorization
+
+Authorization determines what an authenticated user is allowed to do.
+
+For example:
+
+- A normal user may view their profile.
+- An administrator may manage users.
+- A website visitor may view public pages.
+
+Authentication answers:
+
+"Who are you?"
+
+Authorization answers:
+
+"What are you allowed to do?"
+
+### File Permissions
+
+File permissions control who can read, write, or execute files.
+
+Sensitive files should not be publicly accessible.
+
+Examples of sensitive files include:
+
+- Configuration files
+- Password files
+- Private keys
+- API credentials
+- Database credentials
+
+### Repository Permissions
+
+GitHub repository permissions should be configured carefully.
+
+Only trusted users should be given permission to modify important project files.
+
+Repository access should follow the principle of least privilege.
+
+### Cloud Access Policies
+
+Cloud resources should use appropriate access policies.
+
+Users and services should receive only the permissions required for their tasks.
+
+Unnecessary permissions should be removed.
+
+### Least Privilege
+
+Least privilege means giving a user, application, or service only the minimum permissions required to perform its job.
+
+This reduces the possible damage if an account or service is compromised.
+
+Example:
+
+```text
+User
+  |
+  v
+Authentication
+  |
+  v
+Identity verified
+  |
+  v
+Authorization
+  |
+  v
+Check permissions
+  |
+  v
+Allow or deny access
+```
+
+## 13. Backup and Recovery
+
+Backups are copies of important files and data that can be used when the original data is lost, damaged, deleted, or compromised.
+
+Regular backups help protect against:
+
+- Accidental deletion
+- Hardware failure
+- Malware
+- Ransomware
+- Configuration mistakes
+- Server failure
+
+### Website Backup
+
+Important website files should be backed up regularly.
+
+Examples include:
+
+- HTML files
+- CSS files
+- JavaScript files
+- Images
+- Configuration files
+- Database backups, if a database is used
+
+### Backup Best Practices
+
+- Keep regular backups.
+- Store backups separately from the main system.
+- Protect backups from unauthorized access.
+- Test backups regularly.
+- Keep more than one backup copy when possible.
+
+### Recovery
+
+Recovery is the process of restoring a website or system after a failure or security incident.
+
+A basic recovery process can be:
+
+```text
+Identify the problem
+       |
+       v
+Stop or isolate the affected system
+       |
+       v
+Find a clean backup
+       |
+       v
+Restore the required files
+       |
+       v
+Test the website
+       |
+       v
+Return the website to normal operation
+```
+
+## 14. Security Best Practices
+
+Website security should be considered throughout development, deployment, and maintenance.
+
+### Basic Security Practices
+
+- Use HTTPS.
+- Use strong authentication.
+- Protect administrator accounts.
+- Use strong passwords.
+- Enable multi-factor authentication where available.
+- Keep software and dependencies updated.
+- Remove unnecessary services.
+- Restrict unnecessary network ports.
+- Protect sensitive files.
+- Validate user input.
+- Review permissions regularly.
+- Keep backups.
+- Monitor logs for suspicious activity.
+
+### Protect Sensitive Information
+
+Do not store sensitive information in public repositories.
+
+Examples of sensitive information include:
+
+- Passwords
+- API keys
+- Private keys
+- Database credentials
+- Access tokens
+- Cloud credentials
+
+Sensitive information should be stored using appropriate secret-management methods rather than directly inside source code.
+
+### GitHub Security
+
+When using GitHub:
+
+- Do not commit passwords or API keys.
+- Review repository permissions.
+- Use strong authentication.
+- Enable multi-factor authentication.
+- Check repository contents before making them public.
+- Remove accidentally exposed secrets immediately.
+- Use `.gitignore` for files that should not be committed.
+
+### User Input Security
+
+If a website accepts user input through forms, the input should be validated.
+
+Examples include:
+
+- Name
+- Email address
+- Phone number
+- Message
+
+Input validation helps reduce security problems caused by unexpected or malicious input.
+
+## 15. Git Version Control
+
+Git is used to track changes made to the website project.
+
+Git allows developers to:
+
+- Track changes.
+- Restore previous versions.
+- Work on different versions of a project.
+- Collaborate with other developers.
+- Store project history.
+
+### Basic Git Workflow
+
+The basic workflow is:
+
+```text
+Edit files
+    |
+    v
+git add
+    |
+    v
+git commit
+    |
+    v
+git push
+    |
+    v
+GitHub repository
+```
+
