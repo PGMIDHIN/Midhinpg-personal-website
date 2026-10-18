@@ -580,4 +580,32 @@ git push
 GitHub repository
 ```
 
+## 16. GitHub Pages Deployment
+
+GitHub Pages is a service that allows a website to be hosted directly from a GitHub repository.
+
+It is useful for hosting static websites made with:
+
+- HTML
+- CSS
+- JavaScript
+- Images and other static files
+
+### How GitHub Pages Works
+
+The basic process is:
+
+```text
+Website files
+     |
+     v
+GitHub Repository
+     |
+     v
+GitHub Pages
+     |
+     v
+Public Website
+```
+
 
