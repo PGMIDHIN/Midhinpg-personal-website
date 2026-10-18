@@ -608,4 +608,78 @@ GitHub Pages
 Public Website
 ```
 
+## 17. Website Maintenance
 
+- Check website availability.
+- Update website content.
+- Check broken links.
+- Review permissions.
+- Protect sensitive information.
+- Keep backups.
+- Test the website after changes.
+
+## 18. Website Security Testing
+
+- Check HTTPS.
+- Check access controls.
+- Check exposed files and credentials.
+- Check unnecessary ports.
+- Validate user input.
+- Keep software updated.
+
+Tools:
+
+- Nmap
+- OWASP ZAP
+- Burp Suite
+- Wireshark
+
+Only test systems that you own or have permission to test.
+
+## 19. Common Website Security Risks
+
+- Weak passwords
+- Broken authentication
+- Broken access control
+- Sensitive information exposure
+- Security misconfiguration
+- Outdated software
+- XSS
+- SQL Injection
+- Insecure file uploads
+
+### Prevention
+
+- Use strong passwords.
+- Use HTTPS.
+- Apply least privilege.
+- Protect sensitive information.
+- Validate input.
+- Update software.
+- Test regularly.
+
+## 20. Incident Response
+
+Incident response is the process of handling a security incident.
+
+```text
+Detect → Analyze → Contain → Remove → Recover → Review
+```
+
+## 21. Final Checklist
+
+- Website is live.
+- HTTPS works.
+- All 6 pages work.
+- Navigation works.
+- Images and CSS work.
+- Mobile layout works.
+- No sensitive information is exposed.
+- GitHub Actions deployment succeeds.
+- Lighthouse test completed.
+
+## 22. Conclusion
+
+The Midhin Personal Website was developed using HTML and CSS and successfully deployed using GitHub Pages.
+
+The project uses HTTPS and follows basic security practices including access control, backups, security testing, and protection of sensitive information.
