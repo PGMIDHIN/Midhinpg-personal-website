@@ -308,9 +308,10 @@ SSH access should normally be restricted to trusted IP addresses instead of unne
 
 Example security configuration:
 
-## SSH
+# SSH
 
 ```text
+
 Protocol: TCP
 Port: 22
 Source: My trusted IP address
