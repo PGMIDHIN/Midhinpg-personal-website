@@ -316,19 +316,6 @@ Port: 22
 Source: My trusted IP address
 Purpose: Server administration
 
-### HTTP
-
-```text
-Protocol: TCP
-Port: 80
-Source: Internet
-Purpose: Web traffic
-
-Protocol: TCP
-Port: 443
-Source: Internet
-Purpose: Secure web traffic
-
 # 12. Access Control
 
 Access control determines who can access a resource and what actions they are allowed to perform.
