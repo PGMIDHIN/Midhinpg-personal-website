@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Contact Midhin for enquiries, questions and professional messages."
-    >
+    <meta name="description"
+        content="Contact Midhin for cybersecurity enquiries, professional questions, and collaboration opportunities.">
 
-    <title>Contact | Midhin</title>
+    <title>Contact | Midhin - Cybersecurity</title>
 
+    <!-- Website Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="top">
 
     <header>
+
         <h1>
             <a class="site-title" href="index.html">Midhin</a>
         </h1>
 
-        <nav aria-label="Main navigation">
+        <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="skills.html">Skills</a>
@@ -30,76 +33,169 @@
             <a href="learning.html">Learning</a>
             <a href="contact.html" aria-current="page">Contact</a>
         </nav>
+
     </header>
 
 
     <main class="page-container">
 
-        <section class="page-intro">
+        <!-- Contact Introduction -->
+        <section class="hero">
+
             <h2>Contact Me</h2>
 
             <p>
-                If you have an enquiry, question or message,
-                you can contact me using the form below.
+                Have a question, enquiry, or professional opportunity?
+                You can contact me using the details below or send
+                an enquiry through the form.
             </p>
+
         </section>
 
 
+        <!-- Contact Details -->
         <section class="content-section">
 
-            <h2>Send Me a Message</h2>
+            <h2>Contact Details</h2>
 
-            <form
-                action="https://formspree.io/f/xdeayerb"
-                method="POST"
-            >
+            <div class="card-container">
 
-                <label for="name">Name:</label>
+                <div class="card">
+
+                    <h3>Email</h3>
+
+                    <p>
+                        You can contact me by email for professional
+                        enquiries and cybersecurity-related discussions.
+                    </p>
+
+                    <a href="mailto:midhin@example.com">
+                        Send Email
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>LinkedIn</h3>
+
+                    <p>
+                        Connect with me on LinkedIn to follow my
+                        professional journey and cybersecurity work.
+                    </p>
+
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        Visit LinkedIn
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>GitHub</h3>
+
+                    <p>
+                        Explore my projects, code, and practical
+                        cybersecurity learning activities.
+                    </p>
+
+                    <a href="https://github.com/PGMIDHIN" target="_blank" rel="noopener noreferrer">
+                        Visit GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Enquiry Form -->
+        <section class="content-section">
+
+            <h2>Enquiry Form</h2>
+
+            <p>
+                Fill in the form below to send an enquiry.
+                All fields are required.
+            </p>
+
+            <form action="https://formsubmit.co/midhin@example.com" method="POST">
+
+                <!-- FormSubmit configuration -->
+                <input type="hidden" name="_subject" value="New Website Enquiry">
+
+                <input type="hidden" name="_captcha" value="true">
+
+                <input type="hidden" name="_template" value="table">
+
+                <input type="hidden" name="_next"
+                    value="https://pgmidhin.github.io/Midhinpg-personal-website/contact.html">
+
+                <!-- Name -->
+                <label for="name">
+                    Full Name
+                </label>
 
                 <input
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Enter your name"
+                    placeholder="Enter your full name"
                     autocomplete="name"
                     required
+                    minlength="2"
                 >
 
 
-                <label for="email">Email:</label>
+                <!-- Email -->
+                <label for="email">
+                    Email Address
+                </label>
 
                 <input
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Enter your email"
+                    placeholder="Enter your email address"
                     autocomplete="email"
                     required
                 >
 
 
-                <label for="subject">Subject:</label>
+                <!-- Subject -->
+                <label for="subject">
+                    Subject
+                </label>
 
                 <input
                     type="text"
                     id="subject"
                     name="subject"
-                    placeholder="Enter subject"
+                    placeholder="Enter the subject"
                     required
+                    minlength="3"
                 >
 
 
-                <label for="message">Message:</label>
+                <!-- Message -->
+                <label for="message">
+                    Message
+                </label>
 
                 <textarea
                     id="message"
                     name="message"
-                    rows="5"
-                    placeholder="Write your message here..."
+                    rows="7"
+                    placeholder="Write your enquiry here"
                     required
+                    minlength="10"
                 ></textarea>
 
 
+                <!-- Submit -->
                 <button type="submit">
                     Send Enquiry
                 </button>
@@ -109,26 +205,78 @@
         </section>
 
 
+        <!-- Professional Enquiries -->
         <section class="content-section">
 
-            <h2>Other Ways to Connect</h2>
+            <h2>Professional Enquiries</h2>
 
             <p>
-                You can also find my professional and project information
-                through my online profiles.
+                I am interested in cybersecurity learning,
+                security projects, technical discussions,
+                workshops, and professional opportunities.
             </p>
 
             <p>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                    LinkedIn
-                </a>
+                Please provide enough information in your enquiry
+                so that I can understand the purpose of your message.
             </p>
 
-            <p>
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                    GitHub
-                </a>
-            </p>
+        </section>
+
+
+        <!-- Navigation -->
+        <section class="content-section">
+
+            <h2>Explore My Website</h2>
+
+            <div class="card-container">
+
+                <div class="card">
+
+                    <h3>About Me</h3>
+
+                    <p>
+                        Learn more about my background and
+                        cybersecurity journey.
+                    </p>
+
+                    <a href="about.html">
+                        View About
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Skills</h3>
+
+                    <p>
+                        Explore my technical and cybersecurity skills.
+                    </p>
+
+                    <a href="skills.html">
+                        View Skills
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Projects</h3>
+
+                    <p>
+                        Explore my practical cybersecurity projects.
+                    </p>
+
+                    <a href="projects.html">
+                        View Projects
+                    </a>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -148,4 +296,5 @@
     </footer>
 
 </body>
+
 </html>
