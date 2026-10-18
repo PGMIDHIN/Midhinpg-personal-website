@@ -315,3 +315,16 @@ Protocol: TCP
 Port: 22
 Source: My trusted IP address
 Purpose: Server administration
+
+### HTTP
+
+```text
+Protocol: TCP
+Port: 80
+Source: Internet
+Purpose: Web traffic
+
+Protocol: TCP
+Port: 443
+Source: Internet
+Purpose: Secure web traffic
