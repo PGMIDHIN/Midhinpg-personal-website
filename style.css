@@ -222,7 +222,7 @@ footer a {
 
 /* ---------- Responsive Design ---------- */
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
     header {
         padding: 18px 5%;
